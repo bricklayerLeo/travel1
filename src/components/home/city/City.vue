@@ -1,28 +1,21 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search :cities="cities"></city-search>
-    <city-list
-      :cities="cities"
-      :hot="hotCities"
-      :letter="letter"
-    ></city-list>
-    <city-alphabet
-      :cities="cities"
-      @change="handleLetterChange"
-    ></city-alphabet>
+    <city-search></city-search>
+    
   </div>
 </template>
 
 <script>
 
 import CityHeader from './subcomponents/Header'
+import CitySearch from './subcomponents/search'
 
 export default {
   name: 'City',
   components: {
     CityHeader,
-    
+    CitySearch
   },
   data () {
     return {

@@ -40,6 +40,14 @@ export default {
       timer: null
     }
   },
+ 
+     methods:{
+      handleCityClick(city){
+          this.$store.commit('changecity',city)
+           this.$router.push('/')
+      }
+  
+  },
   computed: {
     hasNoData () {
       return !this.list.length

@@ -2,7 +2,7 @@
 <div>
 
      <div class="banner" @click="handleGallaryClick">
-  <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_600x330_aeba2c96.jpg" alt="">
+  <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="">
   <div class="banner-info">
       <div class="banner-tittle">好风景好风景真的好看的啊</div>
       <div class="banner-number"><span class="iconfont">&#xe6dd;</span>39</div>

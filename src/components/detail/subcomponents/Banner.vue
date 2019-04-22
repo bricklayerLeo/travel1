@@ -2,13 +2,13 @@
 <div>
 
      <div class="banner" @click="handleGallaryClick">
-  <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="">
+  <img class="banner-img" :src="bannerImg" alt="">
   <div class="banner-info">
-      <div class="banner-tittle">好风景好风景真的好看的啊</div>
-      <div class="banner-number"><span class="iconfont">&#xe6dd;</span>39</div>
+      <div class="banner-tittle">{{this.sightName}}</div>
+      <div class="banner-number"><span class="iconfont">&#xe6dd;</span> {{this.bannerImgs.length}}</div>
   </div>
   </div>
-  <common-gallery :imgs="imgs" v-show="showGallery"></common-gallery>
+  <common-gallery :imgs="bannerImgs" v-show="showGallery"></common-gallery>
 </div>
  
 </template>
@@ -17,14 +17,19 @@
 import CommonGallery from 'common/gallary/Gallary'
 export default {
   name: 'Banner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
+   
   components:{
       CommonGallery
   },
   data () {
     return {
         showGallery:false,
-     imgs:['//img1.qunarzz.com/sight/p0/1803/b4/b4a14ee953d8f395a3.img.jpg_r_800x800_3d772856.jpg',
-     '//img1.qunarzz.com/sight/p0/1803/ca/ca99dc8105918228a3.img.jpg_r_800x800_ad94578a.jpg']
+    
     }
   },
   methods:{

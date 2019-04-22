@@ -20,11 +20,11 @@ import CommonGallery from 'common/gallary/Gallary'
 import Fade from 'common/fade/Fade'
 export default {
   name: 'Banner',
-  props: {
-    sightName: String,
-    bannerImg: String,
-    bannerImgs: Array
-  },
+  props: [
+    'sightName',
+    'bannerImg',
+    'bannerImgs'
+  ],
    
   components:{
       CommonGallery,
